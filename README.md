@@ -1,6 +1,6 @@
-# ethereumjs-abi
+# puffscoinjs-abi
 
-Module implementing the [PUFFScoin ABI](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) in Javascript. Can be used with RPC libraries for communication or with puffscoinjs-vm to implement a fully fledged simulator.
+Module implementing the PUFFScoin ABI for contracts in Javascript. Can be used with RPC libraries for communication or with puffscoinjs-vm to implement a fully fledged simulator.
 
 ## Usage
 
