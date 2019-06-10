@@ -2,8 +2,6 @@ var assert = require('assert')
 var abi = require('../index.js')
 var BN = require('bn.js')
 
-// Official test vectors from https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI
-
 describe('official test vector 1 (encoding)', function () {
   it('should equal', function () {
     var a = abi.methodID('baz', [ 'uint32', 'bool' ]).toString('hex') + abi.rawEncode([ 'uint32', 'bool' ], [ 69, 1 ]).toString('hex')
@@ -604,7 +602,7 @@ describe('converting to serpent types', function () {
 
 describe('utf8 handling', function () {
   it('should encode latin and extensions', function () {
-    var a = abi.rawEncode([ 'string' ], [ 'ethereum számítógép' ]).toString('hex')
+    var a = abi.rawEncode([ 'string' ], [ 'puffscoin számítógép' ]).toString('hex')
     var b = '00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000017657468657265756d20737ac3a16dc3ad74c3b367c3a970000000000000000000'
     assert.strict.equal(a, b)
   })
@@ -614,7 +612,7 @@ describe('utf8 handling', function () {
     assert.strict.equal(a, b)
   })
   it('should decode latin and extensions', function () {
-    var a = 'ethereum számítógép'
+    var a = 'puffscoin számítógép'
     var b = abi.rawDecode([ 'string' ], Buffer.from('00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000017657468657265756d20737ac3a16dc3ad74c3b367c3a970000000000000000000', 'hex'))
     assert.strict.equal(a, b[0])
   })
