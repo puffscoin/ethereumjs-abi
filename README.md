@@ -40,7 +40,7 @@ var decoded = abi.decode(tokenAbi, "balanceOf(uint256 address)", data)
 #### Simple encoding and decoding
 
 ```js
-var abi = require('ethereumjs-abi')
+var abi = require('puffscoinjs-abi')
 
 // returns the encoded binary (as a Buffer) data to be sent
 var encoded = abi.simpleEncode("balanceOf(address):(uint256)", "0x0000000000000000000000000000000000000000")
